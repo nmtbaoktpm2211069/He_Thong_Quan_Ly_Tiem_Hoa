@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HeThongQuanLyTiemHoa SYSTEM "quanlytiemhoa.dtd">
+<HeThongQuanLyTiemHoa>
+
+    <!-- Danh mục -->
+    <DanhMucs>
+        <DanhMuc MaDM="DM01">
+            <TenDM>Hoa Hồng</TenDM>
+        </DanhMuc>
+        <DanhMuc MaDM="DM02">
+            <TenDM>Hoa Cúc</TenDM>
+        </DanhMuc>
+        <DanhMuc MaDM="DM03">
+            <TenDM>Hoa Sen</TenDM>
+        </DanhMuc>
+        <DanhMuc MaDM="DM04">
+            <TenDM>Hoa Lan</TenDM>
+        </DanhMuc>
+        <DanhMuc MaDM="DM05">
+            <TenDM>Hoa Tulip</TenDM>
+        </DanhMuc>
+        <DanhMuc MaDM="DM06">
+            <TenDM>Hoa Đồng Tiền</TenDM>
+        </DanhMuc>
+        <DanhMuc MaDM="DM07">
+            <TenDM>Hoa Baby</TenDM>
+        </DanhMuc>
+    </DanhMucs>
+
+    <!-- Nhà cung cấp -->
+    <NhaCungCaps>
+        <NhaCungCap MaNCC="NCC01">
+            <TenNCC>Hoa Tươi Miền Tây</TenNCC>
+            <SDT>0911111111</SDT>
+            <DiaChi>12 Nguyễn Văn Cừ, Cần Thơ</DiaChi>
+            <Email>mienTay@gmail.com</Email>
+        </NhaCungCap>
+        <NhaCungCap MaNCC="NCC02">
+            <TenNCC>Hoa Lan Đà Lạt</TenNCC>
+            <SDT>0922222222</SDT>
+            <DiaChi>56 Trần Phú, Đà Lạt</DiaChi>
+            <Email>lanDalat@gmail.com</Email>
+        </NhaCungCap>
+        <NhaCungCap MaNCC="NCC03">
+            <TenNCC>Hoa Hạnh Phúc</TenNCC>
+            <SDT>0933333333</SDT>
+            <DiaChi>78 Lý Thường Kiệt, TP.HCM</DiaChi>
+            <Email>hanhphuc@gmail.com</Email>
+        </NhaCungCap>
+        <NhaCungCap MaNCC="NCC04">
+            <TenNCC>Hoa Bình An</TenNCC>
+            <SDT>0944444444</SDT>
+            <DiaChi>88 Nguyễn Trãi, Hà Nội</DiaChi>
+            <Email>binhan@gmail.com</Email>
+        </NhaCungCap>
+        <NhaCungCap MaNCC="NCC05">
+            <TenNCC>Hoa Tươi Lily</TenNCC>
+            <SDT>0955555555</SDT>
+            <DiaChi>90 Lê Lợi, Huế</DiaChi>
+            <Email>lily@gmail.com</Email>
+        </NhaCungCap>
+        <NhaCungCap MaNCC="NCC06">
+            <TenNCC>Hoa Xinh</TenNCC>
+            <SDT>0966666666</SDT>
+            <DiaChi>10 Cách Mạng, Đà Nẵng</DiaChi>
+            <Email>hoaxinh@gmail.com</Email>
+        </NhaCungCap>
+        <NhaCungCap MaNCC="NCC07">
+            <TenNCC>Hoa Bình Minh</TenNCC>
+            <SDT>0977777777</SDT>
+            <DiaChi>55 Lê Lợi, Cần Thơ</DiaChi>
+            <Email>binhminh@gmail.com</Email>
+        </NhaCungCap>
+    </NhaCungCaps>
+
+    <!-- Sản phẩm -->
+    <SanPhams>
+        <SanPham MaSP="SP01" MaDM="DM01" MaNCC="NCC01">
+            <TenHoa>Hoa Hồng Đỏ</TenHoa>
+            <LoaiHoa>Bó</LoaiHoa>
+            <Gia>15000</Gia>
+            <SoLuongTon>200</SoLuongTon>
+        </SanPham>
+        <SanPham MaSP="SP02" MaDM="DM02" MaNCC="NCC02">
+            <TenHoa>Hoa Cúc Vàng</TenHoa>
+            <LoaiHoa>Bó</LoaiHoa>
+            <Gia>12000</Gia>
+            <SoLuongTon>150</SoLuongTon>
+        </SanPham>
+        <SanPham MaSP="SP03" MaDM="DM03" MaNCC="NCC03">
+            <TenHoa>Hoa Sen Hồng</TenHoa>
+            <LoaiHoa>Cành</LoaiHoa>
+            <Gia>18000</Gia>
+            <SoLuongTon>90</SoLuongTon>
+        </SanPham>
+        <SanPham MaSP="SP04" MaDM="DM04" MaNCC="NCC04">
+            <TenHoa>Hoa Lan Trắng</TenHoa>
+            <LoaiHoa>Chậu</LoaiHoa>
+            <Gia>500000</Gia>
+            <SoLuongTon>30</SoLuongTon>
+        </SanPham>
+        <SanPham MaSP="SP05" MaDM="DM05" MaNCC="NCC05">
+            <TenHoa>Hoa Tulip Đỏ</TenHoa>
+            <LoaiHoa>Bó</LoaiHoa>
+            <Gia>35000</Gia>
+            <SoLuongTon>80</SoLuongTon>
+        </SanPham>
+        <SanPham MaSP="SP06" MaDM="DM06" MaNCC="NCC06">
+            <TenHoa>Hoa Đồng Tiền Hồng</TenHoa>
+            <LoaiHoa>Cành</LoaiHoa>
+            <Gia>10000</Gia>
+            <SoLuongTon>100</SoLuongTon>
+        </SanPham>
+        <SanPham MaSP="SP07" MaDM="DM07" MaNCC="NCC07">
+            <TenHoa>Hoa Baby Trắng</TenHoa>
+            <LoaiHoa>Bó</LoaiHoa>
+            <Gia>45000</Gia>
+            <SoLuongTon>60</SoLuongTon>
+        </SanPham>
+    </SanPhams>
+
+    <!-- Khách hàng -->
+    <KhachHangs>
+        <KhachHang MaKH="KH01">
+            <HoTen>Trần Mai Phương</HoTen>
+            <SDT>0901111222</SDT>
+            <DiaChi>Cần Thơ</DiaChi>
+            <Email>phuong@gmail.com</Email>
+        </KhachHang>
+        <KhachHang MaKH="KH02">
+            <HoTen>Nguyễn Văn Nam</HoTen>
+            <SDT>0902222333</SDT>
+            <DiaChi>TP.HCM</DiaChi>
+            <Email>nam@gmail.com</Email>
+        </KhachHang>
+        <KhachHang MaKH="KH03">
+            <HoTen>Phạm Thị Yến</HoTen>
+            <SDT>0903333444</SDT>
+            <DiaChi>Đà Nẵng</DiaChi>
+            <Email>yen@gmail.com</Email>
+        </KhachHang>
+        <KhachHang MaKH="KH04">
+            <HoTen>Lê Hồng Quân</HoTen>
+            <SDT>0904444555</SDT>
+            <DiaChi>Huế</DiaChi>
+            <Email>quan@gmail.com</Email>
+        </KhachHang>
+        <KhachHang MaKH="KH05">
+            <HoTen>Nguyễn Thu Hằng</HoTen>
+            <SDT>0905555666</SDT>
+            <DiaChi>Hà Nội</DiaChi>
+            <Email>hang@gmail.com</Email>
+        </KhachHang>
+        <KhachHang MaKH="KH06">
+            <HoTen>Trần Nhật Minh</HoTen>
+            <SDT>0906666777</SDT>
+            <DiaChi>Cần Thơ</DiaChi>
+            <Email>minh@gmail.com</Email>
+        </KhachHang>
+        <KhachHang MaKH="KH07">
+            <HoTen>Phan Thanh Vũ</HoTen>
+            <SDT>0907777888</SDT>
+            <DiaChi>Đà Lạt</DiaChi>
+            <Email>vu@gmail.com</Email>
+        </KhachHang>
+    </KhachHangs>
+
+    <!-- Voucher -->
+    <Vouchers>
+        <Voucher MaVoucher="VC01">
+            <TenVoucher>Giảm 10%</TenVoucher>
+            <Loai>Khuyến mãi</Loai>
+            <GiaTri>10</GiaTri>
+            <NgayBD>2025-09-01</NgayBD>
+            <NgayKT>2025-11-30</NgayKT>
+            <TrangThai>Hoạt động</TrangThai>
+        </Voucher>
+        <Voucher MaVoucher="VC02">
+            <TenVoucher>Giảm 15%</TenVoucher>
+            <Loai>Khuyến mãi</Loai>
+            <GiaTri>15</GiaTri>
+            <NgayBD>2025-09-15</NgayBD>
+            <NgayKT>2025-12-31</NgayKT>
+            <TrangThai>Hoạt động</TrangThai>
+        </Voucher>
+        <Voucher MaVoucher="VC03">
+            <TenVoucher>Giảm 20%</TenVoucher>
+            <Loai>Sinh nhật</Loai>
+            <GiaTri>20</GiaTri>
+            <NgayBD>2025-10-01</NgayBD>
+            <NgayKT>2025-10-31</NgayKT>
+            <TrangThai>Hoạt động</TrangThai>
+        </Voucher>
+        <Voucher MaVoucher="VC04">
+            <TenVoucher>Freeship</TenVoucher>
+            <Loai>Hỗ trợ vận chuyển</Loai>
+            <GiaTri>0</GiaTri>
+            <NgayBD>2025-09-20</NgayBD>
+            <NgayKT>2025-11-30</NgayKT>
+            <TrangThai>Hoạt động</TrangThai>
+        </Voucher>
+        <Voucher MaVoucher="VC05">
+            <TenVoucher>Giảm 5%</TenVoucher>
+            <Loai>Tân khách</Loai>
+            <GiaTri>5</GiaTri>
+            <NgayBD>2025-08-01</NgayBD>
+            <NgayKT>2025-12-31</NgayKT>
+            <TrangThai>Hoạt động</TrangThai>
+        </Voucher>
+        <Voucher MaVoucher="VC06">
+            <TenVoucher>Giảm 25%</TenVoucher>
+            <Loai>VIP</Loai>
+            <GiaTri>25</GiaTri>
+            <NgayBD>2025-10-01</NgayBD>
+            <NgayKT>2026-01-31</NgayKT>
+            <TrangThai>Hoạt động</TrangThai>
+        </Voucher>
+        <Voucher MaVoucher="VC07">
+            <TenVoucher>Giảm 50%</TenVoucher>
+            <Loai>Sự kiện</Loai>
+            <GiaTri>50</GiaTri>
+            <NgayBD>2025-12-01</NgayBD>
+            <NgayKT>2025-12-31</NgayKT>
+            <TrangThai>Chưa hoạt động</TrangThai>
+        </Voucher>
+    </Vouchers>
+
+    <!-- Đơn hàng -->
+    <DonHangs>
+        <DonHang MaDH="DH01" MaKH="KH01" MaVoucher="VC01">
+            <NgayDat>2025-10-01</NgayDat>
+            <NgayGiao>2025-10-03</NgayGiao>
+            <TongTien>150000</TongTien>
+            <TrangThai>Đã giao</TrangThai>
+            <HinhThucTT>Tiền mặt</HinhThucTT>
+            <NgayTT>2025-10-03</NgayTT>
+            <SoTien>135000</SoTien>
+        </DonHang>
+        <DonHang MaDH="DH02" MaKH="KH02" MaVoucher="VC02">
+            <NgayDat>2025-10-02</NgayDat>
+            <NgayGiao>2025-10-05</NgayGiao>
+            <TongTien>200000</TongTien>
+            <TrangThai>Đã thanh toán</TrangThai>
+            <HinhThucTT>Chuyển khoản</HinhThucTT>
+            <NgayTT>2025-10-05</NgayTT>
+            <SoTien>170000</SoTien>
+        </DonHang>
+        <DonHang MaDH="DH03" MaKH="KH03" MaVoucher="VC03">
+            <NgayDat>2025-10-03</NgayDat>
+            <NgayGiao>2025-10-06</NgayGiao>
+            <TongTien>180000</TongTien>
+            <TrangThai>Đang giao</TrangThai>
+            <HinhThucTT>Tiền mặt</HinhThucTT>
+            <NgayTT>2025-10-06</NgayTT>
+            <SoTien>144000</SoTien>
+        </DonHang>
+        <DonHang MaDH="DH04" MaKH="KH04" MaVoucher="VC04">
+            <NgayDat>2025-10-04</NgayDat>
+            <NgayGiao>2025-10-07</NgayGiao>
+            <TongTien>300000</TongTien>
+            <TrangThai>Đang xử lý</TrangThai>
+            <HinhThucTT>Chuyển khoản</HinhThucTT>
+            <NgayTT>2025-10-07</NgayTT>
+            <SoTien>300000</SoTien>
+        </DonHang>
+        <DonHang MaDH="DH05" MaKH="KH05" MaVoucher="VC05">
+            <NgayDat>2025-10-05</NgayDat>
+            <NgayGiao>2025-10-08</NgayGiao>
+            <TongTien>500000</TongTien>
+            <TrangThai>Đã giao</TrangThai>
+            <HinhThucTT>Chuyển khoản</HinhThucTT>
+            <NgayTT>2025-10-08</NgayTT>
+            <SoTien>475000</SoTien>
+        </DonHang>
+        <DonHang MaDH="DH06" MaKH="KH06" MaVoucher="VC06">
+            <NgayDat>2025-10-06</NgayDat>
+            <NgayGiao>2025-10-09</NgayGiao>
+            <TongTien>600000</TongTien>
+            <TrangThai>Đã giao</TrangThai>
+            <HinhThucTT>Tiền mặt</HinhThucTT>
+            <NgayTT>2025-10-09</NgayTT>
+            <SoTien>450000</SoTien>
+        </DonHang>
+        <DonHang MaDH="DH07" MaKH="KH07" MaVoucher="VC07">
+            <NgayDat>2025-10-07</NgayDat>
+            <NgayGiao>2025-10-10</NgayGiao>
+            <TongTien>700000</TongTien>
+            <TrangThai>Chờ xác nhận</TrangThai>
+            <HinhThucTT>Chuyển khoản</HinhThucTT>
+            <NgayTT>2025-10-10</NgayTT>
+            <SoTien>350000</SoTien>
+        </DonHang>
+    </DonHangs>
+
+    <!-- Chi tiết đơn hàng -->
+    <ChiTietDonHangs>
+        <ChiTietDonHang MaCTDH="CT01" MaDH="DH01" MaSP="SP01">
+            <SoLuong>10</SoLuong>
+            <DonGia>15000</DonGia>
+        </ChiTietDonHang>
+        <ChiTietDonHang MaCTDH="CT02" MaDH="DH02" MaSP="SP02">
+            <SoLuong>5</SoLuong>
+            <DonGia>12000</DonGia>
+        </ChiTietDonHang>
+        <ChiTietDonHang MaCTDH="CT03" MaDH="DH03" MaSP="SP03">
+            <SoLuong>10</SoLuong>
+            <DonGia>18000</DonGia>
+        </ChiTietDonHang>
+        <ChiTietDonHang MaCTDH="CT04" MaDH="DH04" MaSP="SP04">
+            <SoLuong>1</SoLuong>
+            <DonGia>500000</DonGia>
+        </ChiTietDonHang>
+        <ChiTietDonHang MaCTDH="CT05" MaDH="DH05" MaSP="SP05">
+            <SoLuong>10</SoLuong>
+            <DonGia>35000</DonGia>
+        </ChiTietDonHang>
+        <ChiTietDonHang MaCTDH="CT06" MaDH="DH06" MaSP="SP06">
+            <SoLuong>20</SoLuong>
+            <DonGia>10000</DonGia>
+        </ChiTietDonHang>
+        <ChiTietDonHang MaCTDH="CT07" MaDH="DH07" MaSP="SP07">
+            <SoLuong>5</SoLuong>
+            <DonGia>45000</DonGia>
+        </ChiTietDonHang>
+    </ChiTietDonHangs>
+
+</HeThongQuanLyTiemHoa>

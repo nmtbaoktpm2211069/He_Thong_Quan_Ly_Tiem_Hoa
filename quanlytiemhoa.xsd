@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Root element -->
+    <xs:element name="HeThongQuanLyTiemHoa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="DanhMucs"/>
+                <xs:element ref="NhaCungCaps"/>
+                <xs:element ref="SanPhams"/>
+                <xs:element ref="KhachHangs"/>
+                <xs:element ref="Vouchers"/>
+                <xs:element ref="DonHangs"/>
+                <xs:element ref="ChiTietDonHangs"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Danh mục -->
+    <xs:element name="DanhMucs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DanhMuc" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TenDM" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaDM" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Nhà cung cấp -->
+    <xs:element name="NhaCungCaps">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="NhaCungCap" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TenNCC" type="xs:string"/>
+                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="DiaChi" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaNCC" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Sản phẩm -->
+    <xs:element name="SanPhams">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SanPham" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TenHoa" type="xs:string"/>
+                            <xs:element name="LoaiHoa" type="xs:string"/>
+                            <xs:element name="Gia" type="xs:decimal"/>
+                            <xs:element name="SoLuongTon" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaSP" type="xs:string" use="required"/>
+                        <xs:attribute name="MaDM" type="xs:string" use="required"/>
+                        <xs:attribute name="MaNCC" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Khách hàng -->
+    <xs:element name="KhachHangs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="KhachHang" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="HoTen" type="xs:string"/>
+                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="DiaChi" type="xs:string"/>
+                            <xs:element name="Email" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaKH" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Voucher -->
+    <xs:element name="Vouchers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Voucher" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TenVoucher" type="xs:string"/>
+                            <xs:element name="Loai" type="xs:string"/>
+                            <xs:element name="GiaTri" type="xs:decimal"/>
+                            <xs:element name="NgayBD" type="xs:date"/>
+                            <xs:element name="NgayKT" type="xs:date"/>
+                            <xs:element name="TrangThai" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaVoucher" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Đơn hàng -->
+    <xs:element name="DonHangs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="DonHang" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="NgayDat" type="xs:date"/>
+                            <xs:element name="NgayGiao" type="xs:date"/>
+                            <xs:element name="TongTien" type="xs:decimal"/>
+                            <xs:element name="TrangThai" type="xs:string"/>
+                            <xs:element name="HinhThucTT" type="xs:string"/>
+                            <xs:element name="NgayTT" type="xs:date"/>
+                            <xs:element name="SoTien" type="xs:decimal"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaDH" type="xs:string" use="required"/>
+                        <xs:attribute name="MaKH" type="xs:string" use="required"/>
+                        <xs:attribute name="MaVoucher" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Chi tiết đơn hàng -->
+    <xs:element name="ChiTietDonHangs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ChiTietDonHang" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SoLuong" type="xs:int"/>
+                            <xs:element name="DonGia" type="xs:decimal"/>
+                        </xs:sequence>
+                        <xs:attribute name="MaCTDH" type="xs:string" use="required"/>
+                        <xs:attribute name="MaDH" type="xs:string" use="required"/>
+                        <xs:attribute name="MaSP" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

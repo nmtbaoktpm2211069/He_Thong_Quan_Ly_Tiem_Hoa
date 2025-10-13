@@ -1,0 +1,62 @@
+<!ELEMENT HeThongQuanLyTiemHoa (DanhMucs, NhaCungCaps, SanPhams, KhachHangs, Vouchers, DonHangs, ChiTietDonHangs)>
+
+<!-- ========== DANH MỤC ========== -->
+<!ELEMENT DanhMucs (DanhMuc*)>
+<!ELEMENT DanhMuc (TenDM)>
+<!ATTLIST DanhMuc MaDM ID #REQUIRED>
+<!ELEMENT TenDM (#PCDATA)>
+
+<!-- ========== NHÀ CUNG CẤP ========== -->
+<!ELEMENT NhaCungCaps (NhaCungCap*)>
+<!ELEMENT NhaCungCap (TenNCC, SDT, DiaChi, Email)>
+<!ATTLIST NhaCungCap MaNCC ID #REQUIRED>
+<!ELEMENT TenNCC (#PCDATA)>
+
+<!-- ========== SẢN PHẨM ========== -->
+<!ELEMENT SanPhams (SanPham*)>
+<!ELEMENT SanPham (TenHoa, LoaiHoa, Gia, SoLuongTon)>
+<!ATTLIST SanPham MaSP ID #REQUIRED MaDM IDREF #REQUIRED MaNCC IDREF #REQUIRED>
+<!ELEMENT TenHoa (#PCDATA)>
+<!ELEMENT LoaiHoa (#PCDATA)>
+<!ELEMENT Gia (#PCDATA)>
+<!ELEMENT SoLuongTon (#PCDATA)>
+
+<!-- ========== KHÁCH HÀNG ========== -->
+<!ELEMENT KhachHangs (KhachHang*)>
+<!ELEMENT KhachHang (HoTen, SDT, DiaChi, Email)>
+<!ATTLIST KhachHang MaKH ID #REQUIRED>
+<!ELEMENT HoTen (#PCDATA)>
+
+<!-- ========== VOUCHER ========== -->
+<!ELEMENT Vouchers (Voucher*)>
+<!ELEMENT Voucher (TenVoucher, Loai, GiaTri, NgayBD, NgayKT, TrangThai)>
+<!ATTLIST Voucher MaVoucher ID #REQUIRED>
+<!ELEMENT TenVoucher (#PCDATA)>
+<!ELEMENT Loai (#PCDATA)>
+<!ELEMENT GiaTri (#PCDATA)>
+<!ELEMENT NgayBD (#PCDATA)>
+<!ELEMENT NgayKT (#PCDATA)>
+
+<!-- ========== ĐƠN HÀNG ========== -->
+<!ELEMENT DonHangs (DonHang*)>
+<!ELEMENT DonHang (NgayDat, NgayGiao, TongTien, TrangThai, HinhThucTT, NgayTT, SoTien)>
+<!ATTLIST DonHang MaDH ID #REQUIRED MaKH IDREF #REQUIRED MaVoucher IDREF #REQUIRED>
+<!ELEMENT NgayDat (#PCDATA)>
+<!ELEMENT NgayGiao (#PCDATA)>
+<!ELEMENT TongTien (#PCDATA)>
+<!ELEMENT HinhThucTT (#PCDATA)>
+<!ELEMENT NgayTT (#PCDATA)>
+<!ELEMENT SoTien (#PCDATA)>
+
+<!-- ========== CHI TIẾT ĐƠN HÀNG ========== -->
+<!ELEMENT ChiTietDonHangs (ChiTietDonHang*)>
+<!ELEMENT ChiTietDonHang (SoLuong, DonGia)>
+<!ATTLIST ChiTietDonHang MaCTDH ID #REQUIRED MaDH IDREF #REQUIRED MaSP IDREF #REQUIRED>
+<!ELEMENT SoLuong (#PCDATA)>
+<!ELEMENT DonGia (#PCDATA)>
+
+<!-- ========== KHAI BÁO DÙNG CHUNG ========== -->
+<!ELEMENT SDT (#PCDATA)>
+<!ELEMENT DiaChi (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT TrangThai (#PCDATA)>
