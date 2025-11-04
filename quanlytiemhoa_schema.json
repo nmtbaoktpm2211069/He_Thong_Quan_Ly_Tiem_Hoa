@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HeThongQuanLyTiemHoa",
+  "description": "Lược đồ JSON Schema mô tả cấu trúc dữ liệu hệ thống quản lý tiệm hoa.",
+  "type": "object",
+  "properties": {
+    "SanPhams": {
+      "type": "array",
+      "description": "Danh sách sản phẩm hoa trong cửa hàng",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MaSP": { "type": "string", "pattern": "^SP\\d{2}$", "description": "Mã sản phẩm (ví dụ: SP01)" },
+          "TenHoa": { "type": "string", "minLength": 3, "description": "Tên loại hoa" },
+          "LoaiHoa": { "type": "string", "enum": ["Bó", "Cành", "Chậu"], "description": "Loại hoa" },
+          "Gia": { "type": "number", "minimum": 0, "description": "Giá bán mỗi đơn vị" },
+          "SoLuongTon": { "type": "integer", "minimum": 0, "description": "Số lượng tồn kho" },
+          "MaDM": { "type": "string", "pattern": "^DM\\d{2}$", "description": "Mã danh mục" },
+          "MaNCC": { "type": "string", "pattern": "^NCC\\d{2}$", "description": "Mã nhà cung cấp" }
+        },
+        "required": ["MaSP", "TenHoa", "Gia", "SoLuongTon", "MaDM", "MaNCC"]
+      }
+    },
+
+    "DonHangs": {
+      "type": "array",
+      "description": "Thông tin các đơn hàng của khách",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MaDH": { "type": "string", "pattern": "^DH\\d{2}$" },
+          "MaKH": { "type": "string", "pattern": "^KH\\d{2}$" },
+          "MaVoucher": { "type": "string", "pattern": "^VC\\d{2}$" },
+          "NgayDat": { "type": "string", "format": "date" },
+          "NgayGiao": { "type": "string", "format": "date" },
+          "TongTien": { "type": "number", "minimum": 0 },
+          "TrangThai": {
+            "type": "string",
+            "enum": ["Đang xử lý", "Đang giao", "Đã giao", "Đã hủy", "Đã thanh toán", "Chờ xác nhận"]
+          },
+          "HinhThucTT": {
+            "type": "string",
+            "enum": ["Tiền mặt", "Chuyển khoản", "Online"]
+          },
+          "NgayTT": { "type": "string", "format": "date" },
+          "SoTien": { "type": "number", "minimum": 0 }
+        },
+        "required": ["MaDH", "MaKH", "TongTien", "TrangThai", "HinhThucTT"]
+      }
+    },
+
+    "KhachHangs": {
+      "type": "array",
+      "description": "Thông tin khách hàng",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MaKH": { "type": "string", "pattern": "^KH\\d{2}$" },
+          "HoTen": { "type": "string", "minLength": 3 },
+          "SDT": { "type": "string", "pattern": "^0\\d{9,10}$" },
+          "DiaChi": { "type": "string" },
+          "Email": { "type": "string", "format": "email" }
+        },
+        "required": ["MaKH", "HoTen", "SDT"]
+      }
+    },
+
+    "Vouchers": {
+      "type": "array",
+      "description": "Thông tin các voucher khuyến mãi",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MaVoucher": { "type": "string", "pattern": "^VC\\d{2}$" },
+          "TenVoucher": { "type": "string" },
+          "Loai": { "type": "string" },
+          "GiaTri": { "type": "number", "minimum": 0, "maximum": 100 },
+          "NgayBD": { "type": "string", "format": "date" },
+          "NgayKT": { "type": "string", "format": "date" },
+          "TrangThai": {
+            "type": "string",
+            "enum": ["Còn hạn", "Hết hạn", "Ngừng sử dụng"]
+          }
+        },
+        "required": ["MaVoucher", "TenVoucher", "GiaTri", "TrangThai"]
+      }
+    },
+
+    "NhaCungCaps": {
+      "type": "array",
+      "description": "Danh sách các nhà cung cấp hoa",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MaNCC": { "type": "string", "pattern": "^NCC\\d{2}$" },
+          "TenNCC": { "type": "string" },
+          "SDT": { "type": "string", "pattern": "^0\\d{9,10}$" },
+          "DiaChi": { "type": "string" },
+          "Email": { "type": "string", "format": "email" }
+        },
+        "required": ["MaNCC", "TenNCC"]
+      }
+    }
+  },
+  "required": ["SanPhams", "DonHangs", "KhachHangs", "Vouchers", "NhaCungCaps"]
+}

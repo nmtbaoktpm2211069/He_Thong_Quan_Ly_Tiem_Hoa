@@ -1,0 +1,279 @@
+{
+  "$schema": "./quanlytiemhoa_schema.json",
+  "SanPhams": [
+    {
+      "MaSP": "SP01",
+      "TenHoa": "Hoa Hồng Đỏ",
+      "LoaiHoa": "Bó",
+      "Gia": 15000,
+      "SoLuongTon": 200,
+      "MaDM": "DM01",
+      "MaNCC": "NCC01"
+    },
+    {
+      "MaSP": "SP02",
+      "TenHoa": "Hoa Cúc Vàng",
+      "LoaiHoa": "Bó",
+      "Gia": 12000,
+      "SoLuongTon": 150,
+      "MaDM": "DM02",
+      "MaNCC": "NCC02"
+    },
+    {
+      "MaSP": "SP03",
+      "TenHoa": "Hoa Sen Hồng",
+      "LoaiHoa": "Cành",
+      "Gia": 18000,
+      "SoLuongTon": 90,
+      "MaDM": "DM03",
+      "MaNCC": "NCC03"
+    },
+    {
+      "MaSP": "SP04",
+      "TenHoa": "Hoa Lan Trắng",
+      "LoaiHoa": "Chậu",
+      "Gia": 500000,
+      "SoLuongTon": 30,
+      "MaDM": "DM04",
+      "MaNCC": "NCC04"
+    },
+    {
+      "MaSP": "SP05",
+      "TenHoa": "Hoa Tulip Đỏ",
+      "LoaiHoa": "Bó",
+      "Gia": 35000,
+      "SoLuongTon": 80,
+      "MaDM": "DM05",
+      "MaNCC": "NCC05"
+    },
+    {
+      "MaSP": "SP06",
+      "TenHoa": "Hoa Đồng Tiền Hồng",
+      "LoaiHoa": "Cành",
+      "Gia": 10000,
+      "SoLuongTon": 100,
+      "MaDM": "DM06",
+      "MaNCC": "NCC06"
+    },
+    {
+      "MaSP": "SP07",
+      "TenHoa": "Hoa Baby Trắng",
+      "LoaiHoa": "Bó",
+      "Gia": 45000,
+      "SoLuongTon": 60,
+      "MaDM": "DM07",
+      "MaNCC": "NCC07"
+    }
+  ],
+  "DonHangs": [
+    {
+      "MaDH": "DH01",
+      "MaKH": "KH01",
+      "MaVoucher": "VC01",
+      "NgayDat": "2025-10-01",
+      "NgayGiao": "2025-10-03",
+      "TongTien": 150000,
+      "TrangThai": "Đã giao",
+      "HinhThucTT": "Tiền mặt",
+      "NgayTT": "2025-10-03",
+      "SoTien": 135000
+    },
+    {
+      "MaDH": "DH02",
+      "MaKH": "KH02",
+      "MaVoucher": "VC02",
+      "NgayDat": "2025-10-02",
+      "NgayGiao": "2025-10-05",
+      "TongTien": 200000,
+      "TrangThai": "Đã thanh toán",
+      "HinhThucTT": "Chuyển khoản",
+      "NgayTT": "2025-10-05",
+      "SoTien": 170000
+    },
+    {
+      "MaDH": "DH03",
+      "MaKH": "KH03",
+      "MaVoucher": "VC03",
+      "NgayDat": "2025-10-03",
+      "NgayGiao": "2025-10-06",
+      "TongTien": 180000,
+      "TrangThai": "Đang giao",
+      "HinhThucTT": "Tiền mặt",
+      "NgayTT": "2025-10-06",
+      "SoTien": 144000
+    },
+    {
+      "MaDH": "DH04",
+      "MaKH": "KH04",
+      "MaVoucher": "VC04",
+      "NgayDat": "2025-10-04",
+      "NgayGiao": "2025-10-07",
+      "TongTien": 300000,
+      "TrangThai": "Đang xử lý",
+      "HinhThucTT": "Chuyển khoản",
+      "NgayTT": "2025-10-07",
+      "SoTien": 300000
+    },
+    {
+      "MaDH": "DH05",
+      "MaKH": "KH05",
+      "MaVoucher": "VC05",
+      "NgayDat": "2025-10-05",
+      "NgayGiao": "2025-10-08",
+      "TongTien": 500000,
+      "TrangThai": "Đã giao",
+      "HinhThucTT": "Chuyển khoản",
+      "NgayTT": "2025-10-08",
+      "SoTien": 475000
+    },
+    {
+      "MaDH": "DH06",
+      "MaKH": "KH06",
+      "MaVoucher": "VC06",
+      "NgayDat": "2025-10-06",
+      "NgayGiao": "2025-10-09",
+      "TongTien": 600000,
+      "TrangThai": "Đã giao",
+      "HinhThucTT": "Tiền mặt",
+      "NgayTT": "2025-10-09",
+      "SoTien": 450000
+    },
+    {
+      "MaDH": "DH07",
+      "MaKH": "KH07",
+      "MaVoucher": "VC07",
+      "NgayDat": "2025-10-07",
+      "NgayGiao": "2025-10-10",
+      "TongTien": 700000,
+      "TrangThai": "Chờ xác nhận",
+      "HinhThucTT": "Chuyển khoản",
+      "NgayTT": "2025-10-10",
+      "SoTien": 350000
+    }
+  ],
+  "KhachHangs": [
+    {
+      "MaKH": "KH01",
+      "HoTen": "Trần Mai Phương",
+      "SDT": "0901111222",
+      "DiaChi": "Cần Thơ",
+      "Email": "phuong@gmail.com"
+    },
+    {
+      "MaKH": "KH02",
+      "HoTen": "Nguyễn Văn Nam",
+      "SDT": "0902222333",
+      "DiaChi": "TP.HCM",
+      "Email": "nam@gmail.com"
+    },
+    {
+      "MaKH": "KH03",
+      "HoTen": "Phạm Thị Yến",
+      "SDT": "0903333444",
+      "DiaChi": "Đà Nẵng",
+      "Email": "yen@gmail.com"
+    },
+    {
+      "MaKH": "KH04",
+      "HoTen": "Lê Hồng Quân",
+      "SDT": "0904444555",
+      "DiaChi": "Huế",
+      "Email": "quan@gmail.com"
+    },
+    {
+      "MaKH": "KH05",
+      "HoTen": "Nguyễn Thu Hằng",
+      "SDT": "0905555666",
+      "DiaChi": "Hà Nội",
+      "Email": "hang@gmail.com"
+    },
+    {
+      "MaKH": "KH06",
+      "HoTen": "Trần Nhật Minh",
+      "SDT": "0906666777",
+      "DiaChi": "Cần Thơ",
+      "Email": "minh@gmail.com"
+    },
+    {
+      "MaKH": "KH07",
+      "HoTen": "Phan Thanh Vũ",
+      "SDT": "0907777888",
+      "DiaChi": "Đà Lạt",
+      "Email": "vu@gmail.com"
+    }
+  ],
+  "Vouchers": [
+    {
+      "MaVoucher": "VC01",
+      "TenVoucher": "Giảm 10%",
+      "Loai": "Khuyến mãi",
+      "GiaTri": 10,
+      "NgayBD": "2025-09-01",
+      "NgayKT": "2025-11-30",
+      "TrangThai": "Còn hạn"
+    },
+    {
+      "MaVoucher": "VC02",
+      "TenVoucher": "Giảm 15%",
+      "Loai": "Khuyến mãi",
+      "GiaTri": 15,
+      "NgayBD": "2025-09-15",
+      "NgayKT": "2025-12-31",
+      "TrangThai": "Còn hạn"
+    },
+    {
+      "MaVoucher": "VC03",
+      "TenVoucher": "Giảm 20%",
+      "Loai": "Sinh nhật",
+      "GiaTri": 20,
+      "NgayBD": "2025-10-01",
+      "NgayKT": "2025-10-31",
+      "TrangThai": "Hết hạn"
+    },
+    {
+      "MaVoucher": "VC04",
+      "TenVoucher": "Giảm 30%",
+      "Loai": "Tri ân",
+      "GiaTri": 30,
+      "NgayBD": "2025-09-20",
+      "NgayKT": "2025-11-30",
+      "TrangThai": "Còn hạn"
+    },
+    {
+      "MaVoucher": "VC05",
+      "TenVoucher": "Giảm 5%",
+      "Loai": "Tân khách",
+      "GiaTri": 5,
+      "NgayBD": "2025-08-01",
+      "NgayKT": "2025-12-31",
+      "TrangThai": "Còn hạn"
+    },
+    {
+      "MaVoucher": "VC06",
+      "TenVoucher": "Giảm 25%",
+      "Loai": "VIP",
+      "GiaTri": 25,
+      "NgayBD": "2025-10-01",
+      "NgayKT": "2026-01-31",
+      "TrangThai": "Còn hạn"
+    },
+    {
+      "MaVoucher": "VC07",
+      "TenVoucher": "Giảm 50%",
+      "Loai": "Sự kiện",
+      "GiaTri": 50,
+      "NgayBD": "2025-12-01",
+      "NgayKT": "2025-12-31",
+      "TrangThai": "Ngừng sử dụng"
+    }
+  ],
+  "NhaCungCaps": [
+    { "MaNCC": "NCC01", "TenNCC": "Hoa Tươi Miền Tây" },
+    { "MaNCC": "NCC02", "TenNCC": "Hoa Lan Đà Lạt" },
+    { "MaNCC": "NCC03", "TenNCC": "Hoa Hạnh Phúc" },
+    { "MaNCC": "NCC04", "TenNCC": "Hoa Bình An" },
+    { "MaNCC": "NCC05", "TenNCC": "Hoa Tươi Lily" },
+    { "MaNCC": "NCC06", "TenNCC": "Hoa Xinh" },
+    { "MaNCC": "NCC07", "TenNCC": "Hoa Bình Minh" }
+  ]
+}

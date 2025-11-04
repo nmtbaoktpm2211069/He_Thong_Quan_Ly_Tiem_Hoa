@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <!-- Root element -->
+    <!-- Root -->
     <xs:element name="HeThongQuanLyTiemHoa">
         <xs:complexType>
             <xs:sequence>
@@ -16,6 +16,55 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Kiểu dùng chung -->
+    <xs:simpleType name="SoDienThoai">
+        <xs:restriction base="xs:string">         
+            <xs:pattern value="0\d{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+    <xs:simpleType name="GiaTien">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:totalDigits value="10"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TrangThaiDonHang">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Đang xử lý"/>
+            <xs:enumeration value="Đang giao"/>
+            <xs:enumeration value="Đã giao"/>
+            <xs:enumeration value="Đã hủy"/>
+            <xs:enumeration value="Đã thanh toán"/>
+            <xs:enumeration value="Chờ xác nhận"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TrangThaiVoucherType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Còn hạn"/>
+            <xs:enumeration value="Hết hạn"/>
+            <xs:enumeration value="Ngừng sử dụng"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="HinhThucThanhToan">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Tiền mặt"/>
+            <xs:enumeration value="Chuyển khoản"/>
+            <xs:enumeration value="Online"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <!-- Danh mục -->
     <xs:element name="DanhMucs">
         <xs:complexType>
@@ -25,7 +74,7 @@
                         <xs:sequence>
                             <xs:element name="TenDM" type="xs:string"/>
                         </xs:sequence>
-                        <xs:attribute name="MaDM" type="xs:string" use="required"/>
+                        <xs:attribute name="MaDM" type="xs:ID" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
@@ -40,11 +89,11 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="TenNCC" type="xs:string"/>
-                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="SDT" type="SoDienThoai"/>
                             <xs:element name="DiaChi" type="xs:string"/>
-                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="Email" type="EmailType"/>
                         </xs:sequence>
-                        <xs:attribute name="MaNCC" type="xs:string" use="required"/>
+                        <xs:attribute name="MaNCC" type="xs:ID" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
@@ -60,12 +109,18 @@
                         <xs:sequence>
                             <xs:element name="TenHoa" type="xs:string"/>
                             <xs:element name="LoaiHoa" type="xs:string"/>
-                            <xs:element name="Gia" type="xs:decimal"/>
-                            <xs:element name="SoLuongTon" type="xs:int"/>
+                            <xs:element name="Gia" type="GiaTien"/>
+                            <xs:element name="SoLuongTon">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="MaSP" type="xs:string" use="required"/>
-                        <xs:attribute name="MaDM" type="xs:string" use="required"/>
-                        <xs:attribute name="MaNCC" type="xs:string" use="required"/>
+                        <xs:attribute name="MaSP" type="xs:ID" use="required"/>
+                        <xs:attribute name="MaDM" type="xs:IDREF" use="required"/>
+                        <xs:attribute name="MaNCC" type="xs:IDREF" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
@@ -80,11 +135,11 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="HoTen" type="xs:string"/>
-                            <xs:element name="SDT" type="xs:string"/>
+                            <xs:element name="SDT" type="SoDienThoai"/>
                             <xs:element name="DiaChi" type="xs:string"/>
-                            <xs:element name="Email" type="xs:string"/>
+                            <xs:element name="Email" type="EmailType"/>
                         </xs:sequence>
-                        <xs:attribute name="MaKH" type="xs:string" use="required"/>
+                        <xs:attribute name="MaKH" type="xs:ID" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
@@ -100,12 +155,12 @@
                         <xs:sequence>
                             <xs:element name="TenVoucher" type="xs:string"/>
                             <xs:element name="Loai" type="xs:string"/>
-                            <xs:element name="GiaTri" type="xs:decimal"/>
+                            <xs:element name="GiaTri" type="GiaTien"/>
                             <xs:element name="NgayBD" type="xs:date"/>
                             <xs:element name="NgayKT" type="xs:date"/>
-                            <xs:element name="TrangThai" type="xs:string"/>
+                            <xs:element name="TrangThai" type="TrangThaiVoucherType"/>
                         </xs:sequence>
-                        <xs:attribute name="MaVoucher" type="xs:string" use="required"/>
+                        <xs:attribute name="MaVoucher" type="xs:ID" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
@@ -121,15 +176,15 @@
                         <xs:sequence>
                             <xs:element name="NgayDat" type="xs:date"/>
                             <xs:element name="NgayGiao" type="xs:date"/>
-                            <xs:element name="TongTien" type="xs:decimal"/>
-                            <xs:element name="TrangThai" type="xs:string"/>
-                            <xs:element name="HinhThucTT" type="xs:string"/>
+                            <xs:element name="TongTien" type="GiaTien"/>
+                            <xs:element name="TrangThai" type="TrangThaiDonHang"/>
+                            <xs:element name="HinhThucTT" type="HinhThucThanhToan"/>
                             <xs:element name="NgayTT" type="xs:date"/>
-                            <xs:element name="SoTien" type="xs:decimal"/>
+                            <xs:element name="SoTien" type="GiaTien"/>
                         </xs:sequence>
-                        <xs:attribute name="MaDH" type="xs:string" use="required"/>
-                        <xs:attribute name="MaKH" type="xs:string" use="required"/>
-                        <xs:attribute name="MaVoucher" type="xs:string" use="required"/>
+                        <xs:attribute name="MaDH" type="xs:ID" use="required"/>
+                        <xs:attribute name="MaKH" type="xs:IDREF" use="required"/>
+                        <xs:attribute name="MaVoucher" type="xs:IDREF" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
@@ -143,12 +198,18 @@
                 <xs:element name="ChiTietDonHang" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="SoLuong" type="xs:int"/>
-                            <xs:element name="DonGia" type="xs:decimal"/>
+                            <xs:element name="SoLuong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DonGia" type="GiaTien"/>
                         </xs:sequence>
-                        <xs:attribute name="MaCTDH" type="xs:string" use="required"/>
-                        <xs:attribute name="MaDH" type="xs:string" use="required"/>
-                        <xs:attribute name="MaSP" type="xs:string" use="required"/>
+                        <xs:attribute name="MaCTDH" type="xs:ID" use="required"/>
+                        <xs:attribute name="MaDH" type="xs:IDREF" use="required"/>
+                        <xs:attribute name="MaSP" type="xs:IDREF" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
