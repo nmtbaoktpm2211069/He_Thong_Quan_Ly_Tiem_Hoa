@@ -70,6 +70,7 @@
         <DonHang MaDH="DH07" MaKH="KH07" MaVoucher="VC07"><NgayDat>2025-10-07</NgayDat><NgayGiao>2025-10-10</NgayGiao><TongTien>700000</TongTien><TrangThai>Chờ xác nhận</TrangThai><HinhThucTT>Chuyển khoản</HinhThucTT><NgayTT>2025-10-10</NgayTT><SoTien>350000</SoTien></DonHang>
     </DonHangs>
 
+    
     <!-- Chi tiết đơn hàng -->
     <ChiTietDonHangs>
         <ChiTietDonHang MaCTDH="CT01" MaDH="DH01" MaSP="SP01"><SoLuong>10</SoLuong><DonGia>15000</DonGia></ChiTietDonHang>

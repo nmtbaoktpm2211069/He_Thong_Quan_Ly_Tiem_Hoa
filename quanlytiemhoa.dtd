@@ -55,6 +55,7 @@
 <!ELEMENT SoLuong (#PCDATA)>
 <!ELEMENT DonGia (#PCDATA)>
 
+
 <!-- ========== KHAI BÁO DÙNG CHUNG ========== -->
 <!ELEMENT SDT (#PCDATA)>
 <!ELEMENT DiaChi (#PCDATA)>
